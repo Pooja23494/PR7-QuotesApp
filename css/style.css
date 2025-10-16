@@ -1,0 +1,112 @@
+body {
+    background-image: url(../images/bg1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: fill;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: -1;
+}
+
+/* Timer Start */
+
+.timer {
+    margin-top: 10px;
+}
+
+.timer>svg {
+    width: 200px;
+    height: 200px;
+}
+
+.timer>svg>circle {
+    transform-origin: center;
+    transform: rotate(-90deg);
+}
+
+.timer>svg>circle+circle {
+    stroke: tomato;
+    stroke-linecap: round;
+    stroke-opacity: 1;
+    transition: stroke-dashoffset 0.1s linear;
+}
+
+.timer.animatable>svg>circle+circle {
+    transition: stroke-dashoffset 0.3s ease;
+}
+
+.timer>svg>text {
+    font-size: 1.2rem;
+}
+
+.timer>svg>text+text {
+    font-size: 1rem;
+}
+
+/* Timer End */
+
+
+/* Card Start */
+
+.card {
+    background: rgba(13, 17, 23, 0.85);
+    border-left: 6px solid #238636 !important;
+    padding: 30px 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    margin: 0 auto;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    text-align: left;
+    backdrop-filter: blur(8px);
+}
+
+#title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #58a6ff;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.card blockquote {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    margin: 0;
+    position: relative;
+    color: #e6edf3;
+    text-align: justify;
+    padding-left: 25px;
+}
+
+.card blockquote::before {
+    content: "“";
+    font-size: 3rem;
+    color: #238636;
+    position: absolute;
+    left: 0;
+    top: -10px;
+    font-family: serif;
+}
+
+.card .blockquote-footer {
+    margin-top: 20px;
+    font-size: 1rem;
+    text-align: right;
+    color: #8b949e;
+    font-style: italic;
+}
+
+.card .blockquote-footer cite {
+    color: #f85149;
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Card End */
